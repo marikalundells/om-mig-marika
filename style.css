@@ -1,0 +1,767 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #f4f1eb;
+    color: #171717;
+    font-family: "Instrument Sans", Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+.container {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+h1, h2, h3, p, figure {
+    margin: 0;
+}
+
+h1, h2 {
+    font-family: "Instrument Serif", Georgia, serif;
+    font-weight: 400;
+    line-height: 1;
+}
+
+h2 {
+    margin-bottom: 3rem;
+    font-size: 3.75rem;
+}
+
+a {
+    color: #202a38;
+}
+
+a:focus-visible {
+    outline: 2px solid #202a38;
+    outline-offset: 4px;
+}
+
+
+/* Sidhuvud och meny */
+
+.site-header {
+    border-bottom: 1px solid #d2cec7;
+}
+
+.header-content {
+    min-height: 96px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+}
+
+
+/* Marika Lundell */
+
+.site-title {
+    color: #202a38;
+    font-family: "Instrument Sans", Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.site-title a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* Navigation */
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-list a {
+    color: #202a38;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.nav-list a:not(.contact-button) {
+    font-size: 14px;
+}
+
+.nav-list a:hover {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+
+/* Kontakta mig */
+
+.nav-list .contact-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 36px;
+    padding: 0.4rem 1.15rem;
+    border: 1px solid #202a38;
+    border-radius: 999px;
+    color: #202a38;
+    text-decoration: none;
+}
+
+.nav-list .contact-button:hover {
+    background-color: #202a38;
+    color: #faf9f6;
+    text-decoration: none;
+}
+
+
+/* Om mig */
+
+.hero {
+    padding: 4rem 0;
+}
+
+.hero-layout {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+
+/* Sträcket vid headerbild */
+
+.hero-text {
+    min-width: 0;
+    padding-right: 3rem;
+    border-right: 1px solid #171717;
+}
+
+.hero-title {
+    margin-bottom: 2rem;
+    font-size: 5rem;
+    line-height: 0.95;
+    letter-spacing: -2px;
+    overflow-wrap: anywhere;
+}
+
+.hero-image {
+    display: block;
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+}
+
+.text-link {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.text-link:hover {
+    opacity: 0.65;
+}
+
+.hero-text p + p {
+    margin-top: 1.25rem;
+}
+
+
+/* Små etiketterna ovanför rubrikerna: Om mig, min bakgrund, min utbildning etc. */
+
+.section {
+    padding: 5rem 0;
+}
+
+.section-label {
+    margin-bottom: 1.125rem;
+    color: #bd806b;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+
+/* Intressen */
+
+.interests-section {
+    background-color: #202a38;
+    color: #faf9f6;
+}
+
+.interest-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 0 auto;
+    list-style: none;
+}
+
+.interest-list li {
+    min-width: 0;
+}
+
+.interest-card {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+
+/* Intresse kortet poppar upp vid klick */
+
+.interest-card.active {
+    transform: translateY(-18px) scale(1.08);
+}
+
+.interest-figure {
+    display: block;
+    overflow: hidden;
+}
+
+.interest-list img {
+    display: block;
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+}
+
+.interest-caption {
+    display: block;
+    padding-top: 1rem;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 2rem;
+}
+
+.interest-info {
+    display: none;
+    margin-top: 0.5rem;
+    color: #faf9f6;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.interest-card.active .interest-info {
+    display: block;
+}
+
+.interest-card:focus-visible {
+    outline: 2px solid #faf9f6;
+    outline-offset: 4px;
+}
+
+/* Intressebilden ploppar fram mjukt */
+
+.interest-figure img,
+.design-art {
+    transition: transform 0.4s ease;
+}
+
+.interest-card.active .interest-figure img,
+.interest-card.active .design-art {
+    transform: scale(1.1);
+}
+
+
+/* Muspekaren */
+
+.interest-card:hover .interest-figure {
+    opacity: 0.9;
+}
+
+
+/* Text + rök på designbilden EXTRA*/
+
+.design-art {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.design-steam {
+    position: absolute;
+    top: 7%;
+    left: 33%;
+    width: 34%;
+    height: 44%;
+    overflow: visible;
+    pointer-events: none;
+}
+
+.design-wisp {
+    transform-origin: 50% 100%;
+    animation: design-rise 6s ease-in-out infinite;
+}
+
+.design-wisp:nth-child(2) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+
+.design-wisp:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 8s;
+}
+
+@keyframes design-rise {
+    0% {
+        opacity: 0;
+        transform: translate(0, 8px) scale(0.8, 0.8);
+    }
+
+    25% {
+        opacity: 0.8;
+    }
+
+    65% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-9px, -24px) scale(1.2, 1.12);
+    }
+}
+
+
+/* SELECTED DESIGN WORK EXTRA*/
+
+.design-lettering {
+    position: absolute;
+    top: 15%;
+    left: 0;
+    right: 0;
+    color: #151411;
+    text-align: center;
+    font-family: "Cormorant Garamond", Georgia, serif;
+}
+
+.design-lettering span {
+    display: block;
+    margin-bottom: 18px;
+    font-size: 20px;
+    letter-spacing: 0.22em;
+}
+
+.design-lettering strong {
+    display: block;
+    font-size: 58px;
+    line-height: 0.9;
+}
+
+.design-lettering b {
+    display: block;
+    margin-top: 8px;
+    font-size: 38px;
+}
+
+
+/* Studier texten*/
+
+.studies-section {
+    background-color: #ffffff;
+}
+
+.studies-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: start;
+}
+
+.studies-intro,
+.studies-current {
+    min-width: 0;
+}
+
+.studies-text {
+    color: #494947;
+}
+
+.studies-text + .studies-text {
+    margin-top: 1rem;
+}
+
+.studies-text:last-child {
+    margin-bottom: 2rem;
+}
+
+
+/* Fokus just nu texten*/
+
+.studies-current h3 {
+    margin-bottom: 1rem;
+    color: #4a4a48;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+
+/* Mina Studier ämnen */
+
+.studies-subjects {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.studies-subjects li {
+    padding: 1.125rem 0;
+    border-bottom: 1px solid #d2cec7;
+    font-size: 21px;
+    line-height: 1.3;
+}
+
+.studies-current {
+    padding-top: 9.4rem;
+    margin-left: 8.5rem;
+    max-width: 700px;
+}
+
+
+/* Erfarenheter */
+
+.experience-section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    color: #202a38;
+}
+
+.experience-layout {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 5rem;
+    align-items: end;
+}
+
+.experience-content {
+    min-width: 0;
+}
+
+.experience-intro {
+    max-width: 600px;
+    margin-bottom: 1rem;
+    color: #5f6266;
+}
+
+.experience-portrait {
+    align-self: center;
+}
+
+.experience-portrait img {
+    display: block;
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    object-position: center top;
+}
+
+
+/* Skills & Tools */
+
+.skills-section {
+    background-color: #f4f1eb;
+    color: #202a38;
+}
+
+.skills-section h2 {
+    grid-column: 1 / -1;
+    margin-bottom: 2rem;
+    color: #171717;
+}
+
+.skills-layout {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    column-gap: 3rem;
+    align-items: start;
+}
+
+.skills-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.skills-list li {
+    padding: 1.125rem 0;
+    border-bottom: 1px solid #d2cec7;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.tools-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem 1rem;
+    transform: translateY(-1.5rem);
+}
+
+.tools-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-width: 0;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.tools-list img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+
+/* Kontakt */
+
+.contact-section {
+    padding: 6rem 0;
+    background-color: #202a38;
+    color: #faf9f6;
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+.contact-socials {
+    display: grid;
+    grid-template-columns: repeat(3, 160px);
+    gap: 0.75rem;
+}
+
+.contact-social-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.contact-social-icon {
+    width: 34%;
+    height: 34%;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+.contact-social-card:hover {
+    transform: translateY(-4px);
+}
+
+.contact-social-card:focus-visible,
+.contact-email:focus-visible {
+    outline: 2px solid #faf9f6;
+    outline-offset: 5px;
+}
+
+.contact-section h2 {
+    margin-bottom: 1.75rem;
+    color: #faf9f6;
+    font-size: 4.5rem;
+}
+
+.contact-intro {
+    max-width: 430px;
+    margin-bottom: 1.5rem;
+    color: rgba(250, 249, 246, 0.75);
+}
+
+.contact-details {
+    font-style: normal;
+}
+
+.email-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.contact-email {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.25rem 0;
+    color: #faf9f6;
+    font-weight: 600;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+    transition: opacity 0.2s ease;
+}
+
+.contact-email-icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.contact-email:hover {
+    opacity: 0.7;
+}
+
+
+/* Kopieringsknapp */
+
+.copy-email {
+    width: 24px;
+    height: 24px;
+    border: 0;
+    padding: 0;
+    background: none;
+    color: #faf9f6;
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.copy-email img {
+    display: block;
+    width: 24px;
+    height: 24px;
+}
+
+.copy-email:focus-visible {
+    outline: 2px solid #faf9f6;
+    outline-offset: 4px;
+}
+
+
+/* Sidfot */
+
+.site-footer {
+    padding: 1.25rem 0 1.75rem;
+    background-color: #171717;
+    color: #ffffff;
+    font-size: 0.6875rem;
+}
+
+
+/* Surfplatta */
+
+@media (max-width: 900px) {
+    .header-content,
+    .nav-list {
+        flex-wrap: wrap;
+    }
+
+    .hero-image {
+        height: auto;
+    }
+
+    .hero-text {
+        padding-right: 0;
+        border-right: 0;
+    }
+
+    .hero-layout,
+    .studies-layout,
+    .experience-layout,
+    .skills-layout,
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .interest-list {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .studies-current {
+    margin-left: 0;
+    padding-top: 0;
+}
+
+    .studies-layout {
+    gap: 2rem;
+}
+    }
+
+    .tools-list {
+        transform: none;
+    }
+
+    .contact-socials {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
+
+/* Mobil */
+
+@media (max-width: 600px) {
+    .container {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+
+
+    /* Header */
+
+    .nav-list {
+        justify-content: flex-end;
+        gap: 0.5rem 0.75rem;
+    }
+
+
+    /* Hero */
+
+    .hero-title {
+        font-size: clamp(2.75rem, 14vw, 4rem);
+    }
+
+
+    /* Intressen */
+
+    .interest-list {
+        grid-template-columns: 1fr;
+    }
+
+    .interest-list img {
+    height: auto;
+    }
+
+
+    /* Studier */
+
+    .studies-current {
+    max-width: none;
+}
+
+
+    /* Skills & Tools */
+
+    .tools-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* Kontakt */
+
+    .contact-section h2 {
+        font-size: clamp(2.75rem, 14vw, 4rem);
+    }
+}
