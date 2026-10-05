@@ -628,8 +628,8 @@ a:focus-visible {
 /* Kopieringsknapp */
 
 .copy-email {
-    width: 24px;
-    height: 24px;
+    width: 16px;
+    height: 16px;
     border: 0;
     padding: 0;
     background: none;
@@ -641,8 +641,8 @@ a:focus-visible {
 
 .copy-email img {
     display: block;
-    width: 24px;
-    height: 24px;
+    width: 16px;
+    height: 16px;
 }
 
 .copy-email:focus-visible {
