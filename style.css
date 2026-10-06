@@ -288,7 +288,7 @@ a:focus-visible {
 }
 
 
-/* Text + rök på designbilden EXTRA*/
+/* Text + rök på designkortet EXTRA*/
 
 .design-art {
     display: block;
@@ -342,7 +342,7 @@ a:focus-visible {
 }
 
 
-/* SELECTED DESIGN WORK EXTRA*/
+/* SELECTED DESIGN WORK kortet*/
 
 .design-lettering {
     position: absolute;
@@ -477,7 +477,7 @@ a:focus-visible {
 }
 
 
-/* Skills & Tools */
+/* Skills & Verktyg */
 
 .skills-section {
     background-color: #f4f1eb;
@@ -651,7 +651,6 @@ a:focus-visible {
 }
 
 
-/* Sidfot */
 
 .site-footer {
     padding: 1.25rem 0 1.75rem;
@@ -661,7 +660,7 @@ a:focus-visible {
 }
 
 
-/* Surfplatta */
+/* Responsiv layout upp till 900px */
 
 @media (max-width: 900px) {
     .header-content,
@@ -710,7 +709,7 @@ a:focus-visible {
 
 
 
-/* Mobil */
+/* Responsiv layout upp till 600px */
 
 @media (max-width: 600px) {
     .container {
@@ -718,23 +717,14 @@ a:focus-visible {
         padding-right: 1.25rem;
     }
 
-
-    /* Header */
-
     .nav-list {
         justify-content: flex-end;
         gap: 0.5rem 0.75rem;
     }
 
-
-    /* Hero */
-
     .hero-title {
         font-size: clamp(2.75rem, 14vw, 4rem);
     }
-
-
-    /* Intressen */
 
     .interest-list {
         grid-template-columns: 1fr;
@@ -744,22 +734,13 @@ a:focus-visible {
     height: auto;
     }
 
-
-    /* Studier */
-
     .studies-current {
     max-width: none;
 }
 
-
-    /* Skills & Tools */
-
     .tools-list {
         grid-template-columns: repeat(2, 1fr);
     }
-
-
-    /* Kontakt */
 
     .contact-section h2 {
         font-size: clamp(2.75rem, 14vw, 4rem);
