@@ -1,6 +1,6 @@
 # Om mig – Marika Lundell
 
-En personlig portfolio där jag presenterar mig, mina intressen, erfarenheter och studier. Sidan riktar sig till den som vill lära känna min bakgrund, exempelvis framtida arbetsgivare och samarbetspartner.
+En personlig portfolio där jag presenterar mig, mina intressen, erfarenheter och studier. Sidan är för alla som vill lära känna mig och följa min resa inom UX, design och utveckling. Portfolion är också en grund för att visa upp projekt jag skapar under utbildningen.
 
 Byggd med HTML, CSS och JavaScript, utan ramverk.
 
