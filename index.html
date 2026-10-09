@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="sv">
 
 <head>
@@ -10,7 +9,6 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Instrument+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
@@ -18,11 +16,8 @@
 </head>
 
 <body>
-
-    
     <header class="site-header">
         <nav class="container header-content" aria-label="Huvudmeny">
-
             <h1 class="site-title">
                 <a href="#om-mig">Marika Lundell</a>
             </h1>
@@ -34,58 +29,50 @@
                 <li>
                     <a class="contact-button" href="#kontakt">Kontakta mig</a>
                 </li>
+                <li>
+                    <button class="theme-toggle" type="button" aria-label="Mörkt tema" aria-pressed="false">
+                        <span aria-hidden="true">☾</span>
+                    </button>
+                </li>
             </ul>
-
         </nav>
     </header>
 
     <main>
+        <section id="om-mig" class="hero container hero-layout">
+            <header class="hero-text">
+                <p class="section-label">OM MIG</p>
+                <h2 class="hero-title">Design, teknik<br>&amp; användarupplevelse.</h2>
 
-        
-        <section id="om-mig" class="hero">
-            <article class="container hero-layout">
+                <p>
+                    Jag studerar UX Engineering på
+                    <a href="https://chasacademy.se/" target="_blank" class="text-link">Chas Academy</a>
+                    och har en bakgrund inom fullstackutveckling. Jag gillar att kombinera teknik, design
+                    och affärsförståelse för att skapa något som är enkelt att använda och möter både
+                    användarens och verksamhetens behov.
+                </p>
 
-                <header class="hero-text">
-                    <p class="section-label">OM MIG</p>
-                    <h2 class="hero-title">Design, teknik<br>&amp; användarupplevelse.</h2>
+                <p>
+                    Just nu utvecklar jag mina kunskaper inom UX, tillgänglighet och frontend.
+                    Jag gillar att förstå varför en lösning fungerar, lösa problem och omvandla
+                    idéer till fungerande digitala lösningar.
+                </p>
+            </header>
 
-                    <p>
-                        Jag studerar UX Engineering på
-                        <a href="https://chasacademy.se/" target="_blank" class="text-link">Chas Academy</a>
-                        och har en bakgrund inom fullstackutveckling. Jag gillar att kombinera teknik, design
-                        och affärsförståelse för att skapa något som är enkelt att använda och möter både
-                        användarens och verksamhetens behov.
-                    </p>
-
-                    <p>
-                        Just nu utvecklar jag mina kunskaper inom UX, tillgänglighet och frontend.
-                        Jag gillar att förstå varför en lösning fungerar, lösa problem och omvandla
-                        idéer till fungerande digitala lösningar.
-                    </p>
-
-                </header>
-
-                <img class="hero-image" src="images/marikaheader.png" alt="Porträttbild på Marika Lundell">
-
-            </article>
+            <img class="hero-image" src="images/marikaheader.png" alt="Porträttbild på Marika Lundell">
         </section>
 
-        
-
         <section id="intressen" class="section interests-section">
-
             <header class="container">
                 <p class="section-label">DET SOM INSPIRERAR MIG</p>
                 <h2>Mina intressen</h2>
             </header>
 
             <ul class="interest-list container">
-
                 <li>
                     <button class="interest-card" type="button">
-
                         <span class="interest-figure">
-                            <img src="images/marikaworkout.png" alt="Träning">
+                            <img src="images/marikaworkout.png" alt="Marika i träningskläder sitter på huk">
                         </span>
 
                         <span class="interest-caption">Träning</span>
@@ -93,129 +80,74 @@
                         <span class="interest-info">
                             Träning är ett av mina största intressen och en naturlig del av min livsstil.
                         </span>
-
                     </button>
                 </li>
 
                 <li>
                     <button class="interest-card" type="button">
-
                         <span class="interest-figure">
-
-                            <span class="design-art">
-
-                                <img class="design-photo" src="images/design-citrus.png" alt="">
-
-                                <span class="design-lettering" aria-hidden="true">
-                                    <span>Selected</span>
-                                    <strong>DESIGN</strong>
-                                    <b>WORK</b>
-                                </span>
-
-                                <svg class="design-steam" viewBox="0 0 120 240" preserveAspectRatio="none" aria-hidden="true">
-                                    <defs>
-                                        <filter id="steam-soft">
-                                            <feGaussianBlur stdDeviation="3"/>
-                                        </filter>
-
-                                        <linearGradient id="steam-fade" x1="0" y1="1" x2="0" y2="0">
-                                            <stop offset="0" stop-color="white" stop-opacity="0"/>
-                                            <stop offset="0.2" stop-color="white" stop-opacity=".65"/>
-                                            <stop offset="0.65" stop-color="white" stop-opacity=".4"/>
-                                            <stop offset="1" stop-color="white" stop-opacity="0"/>
-                                        </linearGradient>
-                                    </defs>
-
-                                    <g fill="none" stroke="url(#steam-fade)" stroke-linecap="round" filter="url(#steam-soft)">
-                                        <path class="design-wisp" d="M60 238 C35 209 88 184 59 155 S24 113 53 83 S90 44 48 0" stroke-width="9" />
-
-                                        <path class="design-wisp" d="M65 240 C90 213 41 187 69 155 S100 105 70 78 S42 29 78 0" stroke-width="6" />
-
-                                        <path class="design-wisp" d="M52 240 C28 205 66 183 47 144 S78 105 61 70 S31 23 59 0" stroke-width="12" />
-                                    </g>
-                                </svg>
-
-                            </span>
-
+                            <img src="images/designbild_medrok.png" alt="En hand håller ett ångande orange glas under texten Selected Design Work">
                         </span>
 
                         <span class="interest-caption">Design</span>
 
                         <span class="interest-info">
-                            Jag inspireras av visuell design och genomtänkta digitala upplevelser.
+                            Jag inspireras av visuell design och genomtänkta digitala upplevelser och att vara kreativ.
                         </span>
-
                     </button>
                 </li>
 
                 <li>
                     <button class="interest-card" type="button">
-
                         <span class="interest-figure">
-                            <img src="images/teknik.png" alt="Teknik">
+                            <img src="images/teknik.png" alt="En bärbar dator på ett skrivbord med anteckningar och en mobiltelefon">
                         </span>
 
                         <span class="interest-caption">Teknik</span>
 
                         <span class="interest-info">
-                            Jag gillar att utforska teknik och förstå hur digitala lösningar fungerar.
+                            Jag gillar att utforska teknik, analysera och förstå hur digitala lösningar fungerar.
                         </span>
-
                     </button>
                 </li>
-
             </ul>
         </section>
 
-        
+        <section id="erfarenheter" class="section experience-section container experience-layout">
+            <header class="experience-content">
+                <p class="section-label">MIN BAKGRUND</p>
+                <h2>Mina erfarenheter</h2>
 
-        <section id="erfarenheter" class="section experience-section">
-            <article class="container experience-layout">
+                <p class="experience-intro">
+                    Min bakgrund finns inom logistik, handel och
+                    kundservice, där jag har lett team och arbetat nära
+                    kunder och företag. Det har gett mig en stark
+                    affärsförståelse och förmågan att se både användarens
+                    behov och verksamhetens mål. Jag har också arbetat
+                    med testning och kvalitetssäkring för att förbättra
+                    användarupplevelsen.
+                </p>
 
-                <header class="experience-content">
+                <p class="experience-intro">
+                    Jag har lätt för att se helheten och var det brister,
+                    och vill förstå ett problem ordentligt innan jag
+                    föreslår en lösning. Jag är van att arbeta agilt,
+                    prioritera och anpassa arbetet längs vägen. Det tar
+                    jag med mig in i UX och utveckling: att lyssna,
+                    förklara mina val och tillsammans med andra ta
+                    lösningar från idé till något som fungerar i praktiken.
+                </p>
+            </header>
 
-                    <p class="section-label">MIN BAKGRUND</p>
-
-                    <h2>Mina erfarenheter</h2>
-
-                    <p class="experience-intro">
-                        Min bakgrund finns inom logistik, handel och
-                        kundservice, där jag har lett team och arbetat nära
-                        kunder och företag. Det har gett mig en stark
-                        affärsförståelse och förmågan att se både användarens
-                        behov och verksamhetens mål. Jag har också arbetat
-                        med testning och kvalitetssäkring för att förbättra
-                        användarupplevelsen.
-                    </p>
-
-                    <p class="experience-intro">
-                        Jag har lätt för att se helheten och var det brister,
-                        och vill förstå ett problem ordentligt innan jag
-                        föreslår en lösning. Jag är van att arbeta agilt,
-                        prioritera och anpassa arbetet längs vägen. Det tar
-                        jag med mig in i UX och utveckling: att lyssna,
-                        förklara mina val och tillsammans med andra ta
-                        lösningar från idé till något som fungerar i praktiken.
-                    </p>
-
-                </header>
-
-                <figure class="experience-portrait">
-                    <img src="images/workmarika.jpeg" alt="Porträtt av Marika i arbetsmiljö">
-                </figure>
-
-            </article>
+            <figure class="experience-portrait">
+                <img src="images/workmarika.jpeg" alt="Porträtt av Marika i arbetsmiljö">
+            </figure>
         </section>
-
-       
 
         <section id="studier" class="section studies-section">
             <article class="container studies-layout">
-
                 <header class="studies-intro">
-
                     <p class="section-label">MIN UTBILDNING</p>
-
                     <h2>Mina studier</h2>
 
                     <p class="studies-text">
@@ -229,13 +161,12 @@
                         Jag lär mig också att förstå hur användarnas behov, tekniska möjligheter
                         och affärsmål hänger ihop och påverkar de val man gör längs vägen.
                         I utbildningen får jag lära mig agila arbetssätt och följa hela processen
-                        - från en första idé och research till att testa, utveckla och faktiskt bygga en fungerande lösning, vilket är väldigt spännande.
+                        - från en första idé och research till att testa, utveckla och faktiskt
+                        bygga en fungerande lösning, vilket är väldigt spännande.
                     </p>
-
                 </header>
 
                 <section class="studies-current">
-
                     <h3>Fokus just nu</h3>
 
                     <ul class="studies-subjects">
@@ -243,115 +174,101 @@
                         <li>CSS</li>
                         <li>Responsiv design</li>
                     </ul>
-
                 </section>
-
             </article>
         </section>
 
-        
+        <section id="skills-tools"
+        class="section skills-section container skills-layout"
+        aria-labelledby="skills-heading">
+            <h2 id="skills-heading">Skills &amp; Verktyg</h2>
 
-        <section id="skills-tools" class="section skills-section" aria-labelledby="skills-heading">
-            <article class="container skills-layout">
+            <ul class="skills-list" aria-label="Kompetenser">
+                <li>UX/UI design &amp; prototyper</li>
+                <li>Frontendutveckling</li>
+                <li>Användarcentrerad &amp; tillgänglig design</li>
+            </ul>
 
-                <h2 id="skills-heading">Skills &amp; Verktyg</h2>
+            <ul class="tools-list" aria-label="Verktyg">
+                <li>
+                    <img src="images/tools/microsoftoffice.svg" alt="">
+                    <span>Office</span>
+                </li>
 
-                <ul class="skills-list" aria-label="Kompetenser">
-                    <li>UX/UI design &amp; prototyper</li>
-                    <li>Frontendutveckling</li>
-                    <li>Användarcentrerad &amp; tillgänglig design</li>
-                </ul>
+                <li>
+                    <img src="images/tools/notion.svg" alt="">
+                    <span>Notion</span>
+                </li>
 
-                <ul class="tools-list" aria-label="Verktyg">
+                <li>
+                    <img src="images/tools/hubspot.svg" alt="">
+                    <span>HubSpot</span>
+                </li>
 
-                    <li>
-                        <img src="images/tools/microsoftoffice.svg" alt="">
-                        <span>Office</span>
-                    </li>
+                <li>
+                    <img src="images/tools/slack.svg" alt="">
+                    <span>Slack</span>
+                </li>
 
-                    <li>
-                        <img src="images/tools/notion.svg" alt="">
-                        <span>Notion</span>
-                    </li>
+                <li>
+                    <img src="images/tools/canva.svg" alt="">
+                    <span>Canva</span>
+                </li>
 
-                    <li>
-                        <img src="images/tools/hubspot.svg" alt="">
-                        <span>HubSpot</span>
-                    </li>
+                <li>
+                    <img src="images/tools/capcut.svg" alt="">
+                    <span>CapCut</span>
+                </li>
 
-                    <li>
-                        <img src="images/tools/slack.svg" alt="">
-                        <span>Slack</span>
-                    </li>
+                <li>
+                    <img src="images/tools/figma.svg" alt="">
+                    <span>Figma</span>
+                </li>
 
-                    <li>
-                        <img src="images/tools/canva.svg" alt="">
-                        <span>Canva</span>
-                    </li>
+                <li>
+                    <img src="images/tools/html5.svg" alt="">
+                    <span>HTML5</span>
+                </li>
 
-                    <li>
-                        <img src="images/tools/capcut.svg" alt="">
-                        <span>CapCut</span>
-                    </li>
+                <li>
+                    <img src="images/tools/css3.svg" alt="">
+                    <span>CSS3</span>
+                </li>
 
-                    <li>
-                        <img src="images/tools/figma.svg" alt="">
-                        <span>Figma</span>
-                    </li>
+                <li>
+                    <img src="images/tools/javascript.svg" alt="">
+                    <span>JavaScript</span>
+                </li>
 
-                    <li>
-                        <img src="images/tools/html5.svg" alt="">
-                        <span>HTML5</span>
-                    </li>
+                <li>
+                    <img src="images/tools/git.svg" alt="">
+                    <span>Git</span>
+                </li>
 
-                    <li>
-                        <img src="images/tools/css3.svg" alt="">
-                        <span>CSS3</span>
-                    </li>
-
-                    <li>
-                        <img src="images/tools/javascript.svg" alt="">
-                        <span>JavaScript</span>
-                    </li>
-
-                    <li>
-                        <img src="images/tools/git.svg" alt="">
-                        <span>Git</span>
-                    </li>
-
-                    <li>
-                        <img src="images/tools/github.svg" alt="">
-                        <span>GitHub</span>
-                    </li>
-
-                </ul>
-
-            </article>
+                <li>
+                    <img src="images/tools/github.svg" alt="">
+                    <span>GitHub</span>
+                </li>
+            </ul>
         </section>
 
-
-        
         <section id="kontakt" class="section contact-section">
             <article class="container contact-layout">
-
                 <nav class="contact-socials" aria-label="Sociala medier">
-
                     <a class="contact-social-card" href="https://www.linkedin.com/in/marika-lundell-05569291/" target="_blank" aria-label="LinkedIn">
                         <img class="contact-social-icon" src="images/linkedin-icon.png" alt="">
                     </a>
 
-                    <a class="contact-social-card" href="https://www.instagram.com/marikalundells/" target="_blank" aria-label="Instagram">
-                        <img class="contact-social-icon" src="images/instagram-icon.png" alt="">
+                    <a class="contact-social-card" href="https://github.com/marikalundells" target="_blank" aria-label="GitHub">
+                        <img class="contact-social-icon" src="images/github.svg" alt="">
                     </a>
 
                     <a class="contact-social-card" href="https://www.facebook.com/marika.lundell/" target="_blank" aria-label="Facebook">
-                        <img class="contact-social-icon" src="images/facebook-icon.png" alt="">
+                        <img class="contact-social-icon" src="images/facebook-logo.png" alt="">
                     </a>
-
                 </nav>
 
                 <header class="contact-info">
-
                     <h2>Kontakta mig</h2>
 
                     <p class="contact-intro">
@@ -360,13 +277,10 @@
                     </p>
 
                     <address class="contact-details">
-
                         <span class="email-row">
-
                             <a class="contact-email" href="mailto:marika.lundell@studentchasacademy.se">
                                 <svg class="contact-email-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                                     <rect x="3" y="5" width="18" height="14" rx="1" fill="none" stroke="currentColor" stroke-width="1.5" />
-
                                     <path d="M4 7l8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
 
@@ -376,23 +290,16 @@
                             <button class="copy-email" type="button" aria-label="Kopiera mejladress">
                                 <img src="images/copy_knapp.svg" alt="">
                             </button>
-
                         </span>
-
                     </address>
-
                 </header>
-
             </article>
         </section>
-
     </main>
 
-   
     <footer class="site-footer">
         <p class="container">&copy; 2026 Marika Lundell | Stockholm</p>
     </footer>
-
 </body>
 
 </html>
